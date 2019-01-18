@@ -35,7 +35,7 @@ let contph;
     form: true, // indicates the body should be form urlencoded and sets Content-Type: application/x-www-form-urlencoded headers
     body: {
       emailid: 'mritunjay.sinha@oxanepartners.com',
-      password: 'Oxane@123',
+      password: 'Oxane@1234',
 	  _csrf: csrfToken // insert this as part of form body
     }
 	})
@@ -44,6 +44,27 @@ let contph;
 	cy.viewport(1366, 768)
 	//cy.clear('caches')
   })
+  tname = `test${randomnumbers()}`
+  tvalue = `${randomnumbers()}`
+  tltv = `${srandomnumbers()}`
+  tproperties = `${srandomnumbers()}`
+  tarea = `${lrandomnumbers()}`
+  mvalue = `${randomnumbers()}`
+  toccupancy = `${srandomnumbers()}`
+  tgri = `${srandomnumbers()}`
+  tyield = `${srandomnumbers()}/1000000`
+  tconnections = `${srandomnumbers()}`
+  tcestrev = `${lrandomnumbers()}`
+  ttestrev = `${lrandomnumbers()}`
+  compn = `Finance Management${randomnumbers()}`
+  compalias = `MSF${srandomnumbers()}`
+  compph = `${randomnumbers()}`
+  compwebsite = `www.${str1()}.com`
+  contfname = `Eddie${srandomnumbers()}`
+  contlname = `Brown${srandomnumbers()}`
+  contemail = `${str1()}@testmail.com`
+  contph = `${randomnumbers()}`		
+			
     it('Post Login, Transaction Creation: Create New Transaction', function(){		
 		cy.request('/')
       .its('body')
@@ -65,27 +86,13 @@ let contph;
 			cy.get('[ui-sref="blotter"] > :nth-child(1) > .circle')
 			.should('be.visible').click()
 			//Add Transaction Page
-			tname = `demo${randomnumbers()}`
-			tvalue = `${randomnumbers()}`
-			tltv = `${srandomnumbers()}`
-			tproperties = `${srandomnumbers()}`
-			tarea = `${lrandomnumbers()}`
-			mvalue = `${randomnumbers()}`
-			toccupancy = `${srandomnumbers()}`
-			tgri = `${srandomnumbers()}`
-			tyield = `${srandomnumbers()}/1000000`
-			tconnections = `${srandomnumbers()}`
-			tcestrev = `${lrandomnumbers()}`
-			ttestrev = `${lrandomnumbers()}`
-			compn = `Finance${randomnumbers()}`
-			compalias = `FF${srandomnumbers()}`
-			compph = `${randomnumbers()}`
-			compwebsite = `www.${str1()}.com`
-			contfname = `Eddie${srandomnumbers()}`
-			contlname = `Brown${srandomnumbers()}`
-			contemail = `${str1()}@testmail.com`
-			contph = `${randomnumbers()}`
-			cy.get('#addTransactionListDiv > div').click({ force: true })
+			cy.get('#addTransactionListDiv > div').click()
+			cy.get('body').then(($body) => {
+				if($body.find('#addTransactionListDiv > .border')){
+					return '#addTransactionListDiv > .border'
+				}
+				return '#addTransactionListDiv > div'
+			})
 			//cy.get('#addTransactionListDiv > .border').click()
 			//cy.get('.ptb5').click()
 			//cy.get('.border > .noStyle > :nth-child(1)').click()
@@ -102,33 +109,21 @@ let contph;
 			cy.get(':nth-child(4) > :nth-child(2) > .ng-invalid > .wid-100 > .select2-choice > .select2-arrow > b').click()
 			cy.get(':nth-child(4) > :nth-child(2) > .ng-invalid > .wid-100 > .ui-select-dropdown').contains('ECO Tranche').click()
 			cy.get(':nth-child(1) > :nth-child(4) > :nth-child(2) > .ng-untouched > .wid-100 > .select2-choice > .select2-arrow > b').click()
-			cy.get(':nth-child(1) > :nth-child(4) > :nth-child(2) > .ng-untouched > .wid-100 > .ui-select-dropdown > .search-container > .ui-select-search').type('ECO Tranche')
+			cy.get(':nth-child(1) > :nth-child(4) > :nth-child(2) > .ng-untouched > .wid-100 > .ui-select-dropdown > .search-container > .ui-select-search').type('CCL')
 			cy.get('.select2-result-label > div').click()
 			//Add Clients, here we are adding two different clients
 			//Adding First Client Name
 			cy.get(':nth-child(5) > :nth-child(2) > .ng-pristine > .relative > .wid-100 > .ml-auto').click()
 			cy.get('.absolute').contains('ABN Amro Group NV').click()
 			cy.get('#transactionForm > .shadow > :nth-child(1)').click()
-			//cy.get(':nth-child(5) > :nth-child(2) > .ng-pristine > .relative > .wid-100 > .ml-auto').click()
-			//cy.get('.absolute > :nth-child(1) > .wid-100').type('GIC Private Limited')
-			//cy.get('.scroll-y > :nth-child(1) > .mr10').click()
-			//cy.get('#transactionForm > .shadow > :nth-child(1)').click()
-			//Adding Second Client Name
-			//cy.get(':nth-child(5) > :nth-child(2) > .ng-pristine > .relative > .wid-100 > .ml-auto').click()
-			//cy.get('.absolute').contains('GIC Private Limited').click()
-			//cy.get('#transactionForm > .shadow > :nth-child(1)').click()
-			//cy.get(':nth-child(5) > :nth-child(2) > .ng-pristine > .relative > .wid-100 > .ml-auto').click()
-			//cy.get('.absolute > :nth-child(1) > .wid-100').type('Pluto finace')
-			//cy.get('.scroll-y > :nth-child(1) > .mr10').click()
-			//cy.get('[ng-if="vm.showInfo"]').click()
 			//Add Mandates, here we are adding two Different Mandates
 			//Adding First Mandate
 			cy.get(':nth-child(6) > :nth-child(2) > .ng-pristine > .relative > .wid-100 > .ml-auto').click(3)
 			cy.get('.absolute').contains('Transaction Management').click()
 			cy.get('#transactionForm > .shadow > :nth-child(1)').click()
 			cy.get(':nth-child(6) > :nth-child(2) > .ng-pristine > .relative > .wid-100 > .ml-auto').click()
-			cy.get('.absolute > :nth-child(1) > .wid-100').type('Asset Management')
-			//cy.get('.absolute').contains('Asset Management').click()
+			cy.get('.absolute > :nth-child(1) > .wid-100').type('Co-Investment')
+			cy.get('.absolute').contains('Co-Investment').click()
 			cy.get('#transactionForm > .shadow > :nth-child(1)').click()
 			//Adding Second Mandate
 			cy.get(':nth-child(6) > :nth-child(2) > .ng-pristine > .relative > .wid-100 > .ml-auto').click()
@@ -232,6 +227,7 @@ let contph;
 			cy.get(':nth-child(5) > :nth-child(3) > .ui-state-default').click()
 			//Adding Date Listed
 			cy.get(':nth-child(15) > li.vCenter > .flex > .vCenter > .icon-calendar').click()
+			cy.get('.ui-datepicker-prev > .ui-icon').click()
 			cy.get(':nth-child(5) > :nth-child(3) > .ui-state-default').click()
 			//Adding Next Phase Target Date
 			cy.get('[ng-if="!vm.transactionInformation.transactionId"] > li.vCenter > .flex > .vCenter > .icon-calendar').click()
@@ -292,32 +288,111 @@ let contph;
 			//Saving the Transaction
 			cy.contains('.btn', 'Save').click()
 			cy.wait(10000)
+			cy.log(tname)
+			})
+		})
+	})
+	it('Post New Transaction Creation, Searching it on Pipeline Module', function(){		
+		cy.request('/')
+      .its('body')
+      .then((body) => {
+        // we can use Cypress.$ to parse the string body
+        // thus enabling us to query into it easily
+        const $html = Cypress.$(body)
+        const csrf  = $html.find("input[name=_csrf]").val()
+
+            cy.loginByCSRF(csrf)
+            .then((resp) => {
+            expect(resp.status).to.eq(200)
+            expect(resp.body).to.include("Dashboard")
+		    //Navigation to Pipeline Module
+			cy.visit('fund#!/pipeline/report')
+			cy.get('.mr10 > .flex > .flex-1')
+			.should('be.visible').type(tname)
+			cy.wait(2000)
+			cy.get('.clickable').click()
+			cy.get('[ui-sref="underwriting.deal-info"]').click()
+			cy.get('.btn').click()
+			cy.get('.flex > .icon-menu').click()
+			//Saving Transaction Again 
+			cy.contains('.btn', 'Save').click()
+			cy.wait(2000)
+			})
+		})
+	})
+	it('Post New Transaction Creation, Setting up Transaction and Transitioning it from one stage to another', function(){		
+		cy.request('/')
+      .its('body')
+      .then((body) => {
+        // we can use Cypress.$ to parse the string body
+        // thus enabling us to query into it easily
+        const $html = Cypress.$(body)
+        const csrf  = $html.find("input[name=_csrf]").val()
+
+            cy.loginByCSRF(csrf)
+            .then((resp) => {
+            expect(resp.status).to.eq(200)
+            expect(resp.body).to.include("Dashboard")
+			cy.visit('/fund#!/blotter')
+			cy.wait(5000)
 			//Searching the Saved Transaction on the Blotter Screen
 			cy.get('.fr.mr10 > .flex > .flex-1')
-				  .should('be.visible').type(tname)
-			  cy.get('.clickable').click()
-			  cy.wait(2000)
-			  //Setting up Transaction 
-			  cy.get(':nth-child(3) > .wid-100 > .icon-downArrow').click()
-			  cy.get(':nth-child(3) > .noStyle > .m0 > .wid-100').click() 
-			  cy.get('.left > .noStyle > :nth-child(3)').click()
-			  cy.contains('.nav_three_link', 'Manage Permissions').click()
-			  cy.get('.mt5').click()
-			  cy.get('.right > .btn').click()
-			  cy.wait(5000)
-			  cy.get('.icon-home').click()
-			  //Navigation to Pipeline Module
-			  cy.visit('fund#!/pipeline/report')
-			  cy.wait(5000)
-			  cy.get('.mr10 > .flex > .flex-1')
-				  .should('be.visible').type(tname)
-			  cy.wait(2000)
-			  cy.get('.clickable').click()
-			  cy.get('.btn').click()
-			  cy.get('.flex > .icon-menu').click()
-			 //Saving Transaction Again 
-			  cy.contains('.btn', 'Save').click()
-			  cy.wait(2000)
+			.should('be.visible').type(tname)
+			cy.get('.clickable').click()
+			cy.wait(2000)
+			//Setting up Transaction 
+			cy.get(':nth-child(3) > .wid-100 > .icon-downArrow').click()
+			cy.get(':nth-child(3) > .noStyle > .m0 > .wid-100').click() 
+			cy.get('.left > .noStyle > :nth-child(3)').click()
+			cy.contains('.nav_three_link', 'Manage Permissions').click()
+			cy.get('.mt5').click()
+			cy.get('.right > .btn').click()
+			cy.wait(5000)
+		    //Stage Transitioning To Non-Binding
+			cy.get('.main-menu > :nth-child(1) > .wid-100')
+			.should('be.visible').click()
+			cy.get('[ui-sref="underwriting.deal-info"]')
+			.should('be.visible')
+			cy.get('.pt20 > .wid-100').select('Non-Binding')
+			cy.get('.popup').should('be.visible')
+			cy.get('.icon-calendar').click()
+			cy.get(':nth-child(4) > :nth-child(4) > .ui-state-default').click() 
+			cy.contains('.btn', 'Submit').click()
+			cy.wait(2000)
+			//Stage Transitioning To Binding
+			cy.get('.main-menu > :nth-child(1) > .wid-100')
+			.should('be.visible').click()
+			cy.get('[ui-sref="underwriting.deal-info"]')
+			.should('be.visible')
+			cy.get('.pt20 > .wid-100').select('Binding')
+			cy.get('.popup').should('be.visible')
+			cy.get('.icon-calendar').click()
+			cy.get('.ui-datepicker-next > .ui-icon').click()
+			cy.get(':nth-child(3) > :nth-child(4) > .ui-state-default').click()
+			cy.contains('.btn', 'Submit').click()
+			cy.wait(5000)
+			//Stage Transitioning To Closing
+			cy.get('.main-menu > :nth-child(1) > .wid-100')
+			.should('be.visible').click()
+			cy.get('[ui-sref="underwriting.deal-info"]')
+			.should('be.visible')
+			cy.get('.pt20 > .wid-100').select('Closing')
+			cy.get('.popup').should('be.visible')
+			cy.get('.icon-calendar').click()
+			cy.get('.ui-datepicker-next > .ui-icon').click()
+			cy.get('.ui-datepicker-next > .ui-icon').click()
+			cy.get(':nth-child(3) > :nth-child(4) > .ui-state-default').click()
+			cy.contains('.btn', 'Submit').click()
+			cy.wait(5000)
+			//Stage Transitioning To Management
+			cy.get('.main-menu > :nth-child(1) > .wid-100')
+			.should('be.visible').click()
+			cy.get('[ui-sref="underwriting.deal-info"]')
+			.should('be.visible')
+			cy.get('.pt20 > .wid-100').select('Management')
+			cy.get('.popup').should('be.visible')
+			cy.contains('.btn', 'Submit').click()
+			cy.wait(5000)
 			})
 		})
 	})
