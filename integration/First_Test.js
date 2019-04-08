@@ -34,7 +34,7 @@ let contph;
     url: '/login', // baseUrl is prepended to url
     form: true, // indicates the body should be form urlencoded and sets Content-Type: application/x-www-form-urlencoded headers
     body: {
-      emailid: 'mritunjay.sinha@oxanepartners.com',
+      emailid: 'ram.shukla@oxanepartners.com',
       password: 'Oxane@1234',
 	  _csrf: csrfToken // insert this as part of form body
     }
@@ -317,6 +317,7 @@ let contph;
 			//Saving Transaction Again 
 			cy.contains('.btn', 'Save').click()
 			cy.wait(2000)
+			cy.visit('fund#!/pipeline/report')
 			})
 		})
 	})
