@@ -9,8 +9,8 @@ describe('My First Test', function () {
     url: '/login', // baseUrl is prepended to url
     form: true, // indicates the body should be form urlencoded and sets Content-Type: application/x-www-form-urlencoded headers
     body: {
-      emailid: 'mritunjay.sinha@oxanepartners.com',
-      password: 'C@ge2018',
+      emailid: 'mashwani.diwakar@oxanepartners.com',
+      password: 'welcome@123',
 	  _csrf: csrfToken // insert this as part of form body
     }
 	})

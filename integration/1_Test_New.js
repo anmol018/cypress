@@ -2,16 +2,67 @@
 describe('My First Test', function () {		
     beforeEach(function(){
         cy.viewport(1366, 768)
-         cy.loginByCSRF()
+        cy.loginByCSRF()
          .then((resp) => {
-         expect(resp.status).to.eq(200)
-         expect(resp.body).to.include("Dashboard")
+         expect(resp.status).to.eq(204)
+         cy.log("Login Successful")
 })
     })
     it('Post Login, Loan Summary Report', function(){	
-     cy.visit('http://172.16.1.4/mng/runCustomReport?customReportId=17&platformCurrency=%7B%22codeValueId%22:79,%22codeValueKey%22:%22EUR%22,%22codeValue%22:%22EUR%22,%22active%22:true%7D&entity=PORTFOLIO&entityId=PORTFOLIO&timestampActuals=%7B%22date%22:%22Jan-2019%22,%22templateStatus%22:%22APPROVED%22,%22bpEndDate%22:%2201-Jan-2024%22,%22bpName%22:%22Jan-2019%22,%22templateFrequencyId%22:370,%22source%22:%22ACTUALS%22,%22bpStartDate%22:%2201-Feb-2019%22,%22status%22:%22ADDED%22%7D&timestampRebp=undefined&t=9&tn=Dominus&ds=MANAGEMENT')
-     .wait(5000);
-     
-                
+    cy.visit('/api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39');
+     //cy.get('[ng-if="!vm.showPopup"] > .wid-100 > .mr10').select('Eligible Portfolio')
+     cy.getCookies().then((cookies) => {
+     const $html = cookies[0].value
+     cy.log('Component:- Geographic Concentations')
+     cy.log('Eligible Portfolio * WAVG OPPFI Score')
+     cy.get('[ng-if="!vm.showPopup"] > .wid-100 > .mr10').select('Eligible Portfolio')
+     //cy.log('Eligible Portfolio Request')
+     cy.request({
+      method: 'POST',
+      url: '/api/getViewExecutionResult?t=7', // baseUrl is prepended to url
+      headers:{
+        "X-XSRF-Token": $html
+      },
+      body: {
+        "result": {
+        "key": "GEOGRAPHIC_CONCENTRATION_SCORE",
+        "arguments": {
+        "TRANSACTION_ID": "TRANSACTION_ID",
+        "TEMPLATE_FREQUENCY_ID": 324
+      }
+      }
+      }
+    }).then((response) => {
+      //cy.writeFile('cypress/fixtures/menu.json',response.body.result.result)
+      //cy.log(response.body.result.result).writeFile('cypress/fixtures/menu.json',response.body.result.result)
+      cy.timeConversion(response.duration).then((value) =>{
+      cy.log('Eligible Portfolio Duration',value)
+      })
+    })
+    //cy.log('Total Portfolio Request')
+    cy.request({
+      method: 'POST',
+      url: '/api/getViewExecutionResult?t=7', // baseUrl is prepended to url
+      headers:{
+        "X-XSRF-Token": $html
+      },
+      body: {
+        "result": {
+        "key": "GEOGRAPHIC_CONCENTRATION_SCORE_INC",
+        "arguments": {
+        "TRANSACTION_ID": "TRANSACTION_ID",
+        "TEMPLATE_FREQUENCY_ID": 324
+      }
+      }
+      }
+    }).then((response) => {
+      //cy.writeFile('cypress/fixtures/menu.json',response.body.result.result)
+      //cy.log(response.body.result.result).writeFile('cypress/fixtures/menu.json',response.body.result.result)
+      cy.timeConversion(response.duration).then((value) =>{
+      cy.log('Total Portfolio Duration',value)
+    })  
     })
 })
+})
+})
+    
