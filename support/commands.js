@@ -24,11 +24,22 @@
       form: true, // indicates the body should be form urlencoded and sets Content-Type: application/x-www-form-urlencoded headers
       body: {
         username: 'ashwani.diwakar@oxanepartners.com',
-        password: 'welcome@123'
+        password: 'welcome@1234'
       }
     })
   })
 })
+Cypress.Commands.add('analyticsreport', (element) => {
+var end=Cypress.moment('Aug-2018');
+       cy.fixture('template.json').then((e)=>{
+        e.MONTHLY.ACTUALS.forEach(element => {
+           cy.visit('/api/custom-report/view/run-report/'+element.id+'?t=7%20%20%20%20%20%20%20%20%20%20%20%20&timestampActuals=%7B%22id%22:'+element.template.id+',%22date%22:%22'+element.date+'%22,%22templateStatus%22:%22APPROVED%22,%22template%22:%7B%22id%22:0,%22name%22:null%7D,%22status%22:%22ADDED%22,%22source%22:%22ACTUALS%22,%22freeze%22:false%7D&entity=PORTFOLIO%20%20%20%20%20%20%20%20%20%20%20%20&entityId=undefined&rId='+element.id).wait(10000)
+           var start=Cypress.moment(element.date);
+           startInside = start.subtract(1,'months');
+          // component();
+       });
+      });
+    })
 Cypress.Commands.add('timeConversion', (millisec) => {
   var seconds = (millisec / 1000).toFixed(1);
 

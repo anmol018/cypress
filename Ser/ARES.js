@@ -4,26 +4,26 @@ describe('login',() =>
 {
 
    it('go to login',() =>{
-       cy.request('https://ares.oxanepanorama.com').then((response) => {
-       cy.log(response.duration).wait(5000)
+       cy.visit('https://ares.oxanepanorama.com').then((response) => {
+       //cy.log(response.duration).wait(5000)
        cy.get('#username')
        .type("ashwani.diwakar@oxanepartners.com")
-       cy.get('.btn').click().wait(4000)
+       cy.get('.btn').click()
        cy.get('#password')
        .type("welcome@123")
-       cy.get('.btn').click().wait(4000)
+       cy.get('.btn').click().wait(5000)
       
        //cy.get(':nth-child(1) > .dashboard-nav-item > .dashboard-nav-link > .dashboard-nav-icon').click().wait(3000)
        cy.get(':nth-child(15) > .datatable-body-row > .datatable-row-center > [style="width: 200px; height: auto; min-width: 200px; max-width: 200px;"] > .datatable-body-cell-label > .text-truncate').click().wait(6000)
        
-       
+       var startInside  
        var end=Cypress.moment('Feb-2018');
        cy.fixture('template.json').then((e)=>{
-        e.MONTHLY.ACTUALS.forEach(element => {
-           cy.visit('https://ares.oxanepanorama.com/api/custom-report/view/run-report/'+element.id+'?t=7%20%20%20%20%20%20%20%20%20%20%20%20&timestampActuals=%7B%22id%22:'+element.template.id+',%22date%22:%22'+element.date+'%22,%22templateStatus%22:%22APPROVED%22,%22template%22:%7B%22id%22:0,%22name%22:null%7D,%22status%22:%22ADDED%22,%22source%22:%22ACTUALS%22,%22freeze%22:false%7D&entity=PORTFOLIO%20%20%20%20%20%20%20%20%20%20%20%20&entityId=undefined&rId='+element.id).wait(10000)
+        e.forEach(element => {
+           cy.visit('https://ares.oxanepanorama.com/api/custom-report/view/run-report/39?t=7%20%20%20%20%20%20%20%20%20%20%20%20&timestampActuals=%7B%22id%22:13,%22date%22:%22'+element.date+'%22,%22templateStatus%22:%22APPROVED%22,%22template%22:%7B%22id%22:0,%22name%22:null%7D,%22status%22:%22ADDED%22,%22source%22:%22ACTUALS%22,%22freeze%22:false%7D&entity=PORTFOLIO%20%20%20%20%20%20%20%20%20%20%20%20&entityId=undefined&rId=39')
            var start=Cypress.moment(element.date);
            startInside = start.subtract(1,'months');
-          // component();
+        component();
        });
       });
 
