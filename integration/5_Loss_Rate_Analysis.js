@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+Cypress.config("defaultCommandTimeout", 100000)
 describe('Analytics Report', function () {		
     beforeEach(function(){
         cy.viewport(1366, 768)
@@ -18,7 +19,7 @@ describe('Analytics Report', function () {
   //cy.get('#lossRateAnalysis > .ptb5 > .ng-isolate-scope > .plr10 > .icon-arrowdown').click()
   //cy.get('#lossRateAnalysis > .ptb5 > .ng-isolate-scope > .p5').find('label').each(($country)=> {
   //cy.get('#lossRateAnalysis > .ptb5 > .ng-isolate-scope > .p5 > .noStyle .ng-pristine').click(($country).text())    
-  cy.log(($LRAoption).text(),($LRAoption).text())
+  cy.log(($LRAoption).text(),($LRAscenario).text())
 })
 })
 })

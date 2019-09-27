@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+Cypress.config("defaultCommandTimeout", 100000)
 describe('Analytics Report', function () {		
     beforeEach(function(){
         cy.viewport(1366, 768)
