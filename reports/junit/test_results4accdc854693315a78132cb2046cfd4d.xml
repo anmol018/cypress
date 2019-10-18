@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="true" time="4.886" tests="1" failures="2">
+  <testsuite name="Root Suite" timestamp="2019-10-15T05:25:47" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Analytics Report" timestamp="2019-10-15T05:25:47" tests="1" failures="2" time="4.886">
+    <testcase name="Analytics Report Post Login, Analytics Report, Delinquency" time="0" classname="Post Login, Analytics Report, Delinquency">
+      <failure message="Timed out retrying: Expected to find element: &apos;.ml5 &gt; loss-rate select&apos;, but never found it." type="CypressError"><![CDATA[CypressError: Timed out retrying: Expected to find element: '.ml5 > loss-rate select', but never found it.
+    at Object.cypressErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85348:11)
+    at Object.throwErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85303:18)
+    at Object.throwErrByPath (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85335:17)
+    at retry (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:77321:16)
+    at onFailFn (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:68422:16)
+    at tryCatcher (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:118962:23)
+    at Promise._settlePromiseFromHandler (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116898:31)
+    at Promise._settlePromise (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116955:18)
+    at Promise._settlePromise0 (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117000:10)
+    at Promise._settlePromises (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117075:18)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113687:16)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113697:10)
+    at Async.drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113571:14)
+    at <anonymous>]]></failure>
+    </testcase>
+    <testcase name="Analytics Report &quot;after each&quot; hook: onFailed for &quot;Post Login, Analytics Report, Delinquency&quot;" time="4.886" classname="&quot;after each&quot; hook: onFailed for &quot;Post Login, Analytics Report, Delinquency&quot;">
+      <failure message="Cypress command timeout of &apos;1010ms&apos; exceeded.
+
+Because this error occurred during a &apos;after each&apos; hook we are skipping all of the remaining tests." type="Error"><![CDATA[Error: Cypress command timeout of '1010ms' exceeded.
+
+Because this error occurred during a 'after each' hook we are skipping all of the remaining tests.
+    at https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:82978:25]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

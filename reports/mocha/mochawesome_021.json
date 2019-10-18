@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-10-03T08:38:05.676Z",
+    "end": "2019-10-03T08:38:20.583Z",
+    "duration": 14907,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "48ef5b28-d2ad-45fb-80b6-1344810e3525",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "8980253d-1cdf-446d-8c74-2313bcd29212",
+        "title": "Analytics Report",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Post Login, Analytics Report, Receivables Concentrations",
+            "fullTitle": "Analytics Report Post Login, Analytics Report, Receivables Concentrations",
+            "duration": 14836,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.visit('/api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39'); //Receivables Concentrations\ncy.get('.pr5 > .border > [ng-if=\"vm.config\"] > .ptb5 > .fr').find('option').each(function ($RCscenario) {\n  cy.get('.pr5 > .border > [ng-if=\"vm.config\"] > .ptb5 > .fr').select($RCscenario.text());\n  cy.log('Receivables Concentrations', $RCscenario.text());\n}); //Receivables Concentrations\ncy.get('.pl5 > .border > [ng-if=\"vm.config\"] > .ptb5 > .fr').find('option').each(function ($RCscenario1) {\n  cy.get('.pl5 > .border > [ng-if=\"vm.config\"] > .ptb5 > .fr').select($RCscenario1.text());\n  cy.log('Receivables Concentrations', $RCscenario1.text());\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "bb792a95-e17b-4b2c-bdc2-d5f6f6024ec8",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "bb792a95-e17b-4b2c-bdc2-d5f6f6024ec8"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 14836,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

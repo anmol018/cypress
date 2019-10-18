@@ -1,0 +1,23 @@
+{
+  "specName": "4_Trend_Analysis.js",
+  "title": "Post Login, Analytics Report,Trend Analysis",
+  "suiteName": "Analytics Report",
+  "testName": "Analytics Report Post Login, Analytics Report,Trend Analysis",
+  "testError": "Timed out retrying: Expected to find element: '.ml5 chart [ng-model=\"vm.period\"]', but never found it.",
+  "testCommands": [
+    "viewport 1366, 768",
+    "request ",
+    "getCookies ",
+    "assert expected **[ Array(1) ]** to have a property **length**",
+    "assert expected **[ Array(1) ]** to have a length of **1**",
+    "log 4ce8d6c0-5dc8-43c7-a315-5ba86d7741b6",
+    "request ",
+    "request ",
+    "assert expected **204** to equal **204**",
+    "log Login Successful",
+    "visit /api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39",
+    "get .ml5 chart [ng-model=\"vm.period\"]",
+    "xhr  POST https://ares.oxanepanorama.com/api/getViewExecutionResult?t=7"
+  ],
+  "screenshot": "post-login-analytics-report-trend-analysis-failed.png"
+}

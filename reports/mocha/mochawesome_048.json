@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-10-09T10:18:52.419Z",
+    "end": "2019-10-09T10:19:16.970Z",
+    "duration": 24551,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "609bffe6-b7a7-4d78-96de-63d5de603641",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "ce8ddb1e-6acb-4857-a778-fd14adfab27c",
+        "title": "Analytics Report",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Post Login, Analytics Report, Geographic Concentrations",
+            "fullTitle": "Analytics Report Post Login, Analytics Report, Geographic Concentrations",
+            "duration": 24497,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.visit('/api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39'); //Geographic Concentrations\ncy.get('[ng-if=\"!vm.showPopup\"] > .wid-100 > .mr10').should('be.visible').find('option').each(function ($portfolio) {\n  cy.get('[ng-if=\"!vm.showPopup\"] > .wid-100 > .mr10').select($portfolio.text());\n  cy.get('[ng-if=\"!vm.showPopup\"] > .wid-100 > [ng-if=\"vm.dropDown.length\"]').find('option').each(function ($scenario) {\n    cy.get('[ng-if=\"!vm.showPopup\"] > .wid-100 > [ng-if=\"vm.dropDown.length\"]').select($scenario.text());\n    cy.log($portfolio.text(), $scenario.text());\n  });\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "54538410-8a93-44b4-962e-540bc48841dd",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "54538410-8a93-44b4-962e-540bc48841dd"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 24497,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

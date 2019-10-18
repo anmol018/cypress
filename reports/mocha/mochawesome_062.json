@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-10-09T13:17:53.104Z",
+    "end": "2019-10-09T13:18:13.984Z",
+    "duration": 20880,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "34d4c263-40b6-4570-903c-e80223c760fa",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "3ed6a23e-da66-4ccb-85f9-aa324924ba3e",
+        "title": "Analytics Report",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Post Login, Analytics Report, Loss Rate Analysis",
+            "fullTitle": "Analytics Report Post Login, Analytics Report, Loss Rate Analysis",
+            "duration": 20833,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.visit('/api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39').wait(10000); //Loss Rate Analysis\ncy.get('#lossRateAnalysis > .ptb5 > [ng-if=\"vm.support.length\"]').should('be.visible').find('option').each(function ($LRAoption) {\n  cy.get('#lossRateAnalysis > .ptb5 > [ng-if=\"vm.support.length\"]').select($LRAoption.text());\n  cy.get('#lossRateAnalysis > .ptb5 > [ng-if=\"vm.supportLimits.length\"]').find('option').each(function ($LRAscenario) {\n    cy.get('#lossRateAnalysis > .ptb5 > [ng-if=\"vm.supportLimits.length\"]').select($LRAscenario.text()); //cy.get('#lossRateAnalysis > .ptb5 > .ng-isolate-scope > .plr10 > .icon-arrowdown').click()\n    //cy.get('#lossRateAnalysis > .ptb5 > .ng-isolate-scope > .p5').find('label').each(($country)=> {\n    //cy.get('#lossRateAnalysis > .ptb5 > .ng-isolate-scope > .p5 > .noStyle .ng-pristine').click(($country).text())    \n    cy.log($LRAoption.text(), $LRAscenario.text());\n  });\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "50771aa6-0bfb-4485-99de-b48f5a6c23a6",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "50771aa6-0bfb-4485-99de-b48f5a6c23a6"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 20833,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="true" time="0" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-10-17T09:41:33" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Analytics Report" timestamp="2019-10-17T09:41:33" tests="1" failures="1" time="0">
+    <testcase name="Analytics Report Post Login, Analytics Report, Geographic Concentrations" time="0" classname="Post Login, Analytics Report, Geographic Concentrations">
+      <failure message="cypress is not defined" type="ReferenceError"><![CDATA[ReferenceError: cypress is not defined
+    at Context.<anonymous> (https://ares.oxanepanorama.com/__cypress/tests?p=cypress\integration\1_Geographic_Concentration.js-970:220:5)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

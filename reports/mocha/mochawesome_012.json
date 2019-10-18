@@ -1,0 +1,78 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2019-10-03T07:36:37.356Z",
+    "end": "2019-10-03T07:37:13.653Z",
+    "duration": 36297,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "764e3f31-3dbe-4213-aa51-1a08ff669582",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "6338c256-2254-4f99-8d90-b3ccbc7584ef",
+        "title": "Analytics Report",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Post Login, Analytics Report, Roll Rate Analysis",
+            "fullTitle": "Analytics Report Post Login, Analytics Report, Roll Rate Analysis",
+            "duration": 36238,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "cy.server();\ncy.route('POST', '/api/getViewExecutionResult?t=7').as('iteration');\ncy.visit('/api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39'); //Roll Rate Analysis\ncy.get('.ng-isolate-scope > .wid-100 > .mr10').find('option').each(function ($RRAoption) {\n  cy.get('.ng-isolate-scope > .wid-100 > .mr10').select($RRAoption.text());\n  cy.get('.ng-isolate-scope > .wid-100 > [ng-if=\"vm.dropDown.length\"]').find('option').each(function ($months) {\n    cy.get('.ng-isolate-scope > .wid-100 > [ng-if=\"vm.dropDown.length\"]').select($months.text()).wait('@iteration').then(function (response) {\n      cy.timeConversion(response.duration).then(function ($value) {\n        cy.log('Response Duration:', $value);\n        cy.log($RRAoption.text(), $months.text(), $value);\n      });\n    });\n  });\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "30bcb49d-c6a2-47c6-acd2-0d87abcc8463",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "30bcb49d-c6a2-47c6-acd2-0d87abcc8463"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 36238,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}

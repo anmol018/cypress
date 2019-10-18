@@ -1,0 +1,80 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2019-10-03T13:51:14.923Z",
+    "end": "2019-10-03T13:51:21.368Z",
+    "duration": 6445,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "92265357-109e-49b2-b752-bccad950933c",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "720c98bc-93c4-4c3e-974e-b47f915e0f3a",
+        "title": "Analytics Report",
+        "fullFile": "",
+        "file": "",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Post Login, Analytics Report,Trend Analysis",
+            "fullTitle": "Analytics Report Post Login, Analytics Report,Trend Analysis",
+            "duration": 6419,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "cy.visit('/api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39'); //Trend Analysis\ncy.get('#trendAnalysis > [ng-if=\"vm.config\"] > .ptb5 > .fr').find('option').each(function ($TAscenario) {\n  cy.get('#trendAnalysis > [ng-if=\"vm.config\"] > .ptb5 > .fr').select($TAscenario.text());\n  cy.log('Trend Analysis', $TAscenario.text());\n});",
+            "err": {
+              "message": "CypressError: Timed out retrying: Expected to find element: '#trendAnalysis > [ng-if=\"vm.config\"] > .ptb5 > .fr', but never found it.",
+              "estack": "CypressError: Timed out retrying: Expected to find element: '#trendAnalysis > [ng-if=\"vm.config\"] > .ptb5 > .fr', but never found it.\n    at Object.cypressErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85348:11)\n    at Object.throwErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85303:18)\n    at Object.throwErrByPath (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85335:17)\n    at retry (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:77321:16)\n    at onFailFn (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:68422:16)\n    at tryCatcher (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:118962:23)\n    at Promise._settlePromiseFromHandler (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116898:31)\n    at Promise._settlePromise (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116955:18)\n    at Promise._settlePromise0 (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117000:10)\n    at Promise._settlePromises (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117075:18)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113687:16)\n    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113697:10)\n    at Async.drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113571:14)\n    at <anonymous>"
+            },
+            "isRoot": false,
+            "uuid": "032f17af-d300-4bf8-b22c-ac03f9852c28",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "032f17af-d300-4bf8-b22c-ac03f9852c28"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 6419,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 2000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
