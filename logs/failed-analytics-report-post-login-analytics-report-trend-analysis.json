@@ -3,21 +3,16 @@
   "title": "Post Login, Analytics Report,Trend Analysis",
   "suiteName": "Analytics Report",
   "testName": "Analytics Report Post Login, Analytics Report,Trend Analysis",
-  "testError": "Timed out retrying: Expected to find element: '.ml5 chart [ng-model=\"vm.period\"]', but never found it.",
+  "testError": "cy.request() failed on:\n\nhttps://ares.oxanepanorama.com/api/authentication\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not '2xx' or '3xx'.\n\nIf you do not want status codes to cause failures pass the option: 'failOnStatusCode: false'\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://ares.oxanepanorama.com/api/authentication\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"X-XSRF-Token\": \"8847449b-50fb-4282-834b-03078a2bb1fc\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/3.4.1 Chrome/61.0.3163.100 Electron/2.0.18 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"cookie\": \"XSRF-TOKEN=8847449b-50fb-4282-834b-03078a2bb1fc\",\n  \"content-type\": \"application/x-www-form-urlencoded\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 68\n}\nBody: username=ashwani.diwakar%40oxanepartners.com&password=welcome%401234\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"server\": \"nginx/1.12.2\",\n  \"date\": \"Tue, 12 Nov 2019 08:24:58 GMT\",\n  \"content-type\": \"application/json;charset=UTF-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"strict-transport-security\": \"max-age=31536000 ; includeSubDomains\"\n}\nBody: {\n  \"timestamp\": \"2019-11-12T08:24:58.213+0000\",\n  \"status\": 401,\n  \"error\": \"Unauthorized\",\n  \"message\": \"Unauthorized\",\n  \"path\": \"/api/authentication\"\n}\n\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Analytics Report'",
   "testCommands": [
     "viewport 1366, 768",
     "request ",
     "getCookies ",
     "assert expected **[ Array(1) ]** to have a property **length**",
     "assert expected **[ Array(1) ]** to have a length of **1**",
-    "log 4ce8d6c0-5dc8-43c7-a315-5ba86d7741b6",
+    "log 8847449b-50fb-4282-834b-03078a2bb1fc",
     "request ",
-    "request ",
-    "assert expected **204** to equal **204**",
-    "log Login Successful",
-    "visit /api/custom-report/view/run-report/39?t=7++++++++++++&timestampActuals=%7B%22id%22%3A324%2C%22date%22%3A%222019-08-01%22%2C%22templateStatus%22%3A%22APPROVED%22%2C%22template%22%3A%7B%22id%22%3A0%2C%22name%22%3Anull%7D%2C%22status%22%3A%22ADDED%22%2C%22source%22%3A%22ACTUALS%22%2C%22freeze%22%3Afalse%7D&entity=PORTFOLIO++++++++++++&entityId=undefined&rId=39",
-    "get .ml5 chart [ng-model=\"vm.period\"]",
-    "xhr  POST https://ares.oxanepanorama.com/api/getViewExecutionResult?t=7"
+    "request "
   ],
   "screenshot": "post-login-analytics-report-trend-analysis-failed.png"
 }

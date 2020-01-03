@@ -1,0 +1,293 @@
+{
+	"MONTHLY" : {
+	  "ACTUALS" : [ {
+		"id": 59,
+		"date": "2019-09-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 33,
+		"date": "2019-08-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 36,
+		"date": "2019-07-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 58,
+		"date": "2019-06-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 57,
+		"date": "2019-05-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 56,
+		"date": "2019-04-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 55,
+		"date": "2019-03-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 54,
+		"date": "2019-02-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 53,
+		"date": "2019-01-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 52,
+		"date": "2018-12-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 51,
+		"date": "2018-11-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 50,
+		"date": "2018-10-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 49,
+		"date": "2018-09-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 48,
+		"date": "2018-08-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 47,
+		"date": "2018-07-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 46,
+		"date": "2018-06-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 45,
+		"date": "2018-05-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 44,
+		"date": "2018-04-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 43,
+		"date": "2018-03-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 42,
+		"date": "2018-02-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 41,
+		"date": "2018-01-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 40,
+		"date": "2017-12-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 39,
+		"date": "2017-11-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+	},{
+		"id": 38,
+		"date": "2017-10-01",
+		"templateStatus": "APPROVED",
+		"tid": 9,
+		"template": {
+			"id": 0,
+			"name": null
+		},
+		"status": "ADDED",
+		"source": "ACTUALS",
+		"freeze": "FALSE"
+		}]
+	}
+}

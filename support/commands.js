@@ -12,7 +12,7 @@
       },
       form: true, // indicates the body should be form urlencoded and sets Content-Type: application/x-www-form-urlencoded headers
       body: {
-        username: 'ashwani.diwakar@oxanepartners.com',
+        username: 'admin@oxanepartners.com',
       }
     })
     cy.request({
@@ -23,8 +23,8 @@
       },
       form: true, // indicates the body should be form urlencoded and sets Content-Type: application/x-www-form-urlencoded headers
       body: {
-        username: 'ashwani.diwakar@oxanepartners.com',
-        password: 'welcome@1234'
+        username: 'admin@oxanepartners.com',
+        password: 'Oxane@123'
       }
     })
   })

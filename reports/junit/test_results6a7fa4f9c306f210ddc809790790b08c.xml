@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="true" time="64.657" tests="1" failures="2">
+  <testsuite name="Root Suite" timestamp="2019-10-18T11:39:06" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Analytics Report" timestamp="2019-10-18T11:39:06" tests="1" failures="2" time="64.657">
+    <testcase name="Analytics Report Post Login, Analytics Report, Geographic Concentrations" time="0" classname="Post Login, Analytics Report, Geographic Concentrations">
+      <failure message="Timed out after waiting &apos;60000ms&apos; for your remote page to load.
+
+Your page did not fire its &apos;load&apos; event within &apos;60000ms&apos;.
+
+You can try increasing the &apos;pageLoadTimeout&apos; value in &apos;cypress.json&apos; to wait longer.
+
+Browsers will not fire the &apos;load&apos; event until all stylesheets and scripts are done downloading.
+
+When this &apos;load&apos; event occurs, Cypress will continue running commands." type="CypressError"><![CDATA[CypressError: Timed out after waiting '60000ms' for your remote page to load.
+
+Your page did not fire its 'load' event within '60000ms'.
+
+You can try increasing the 'pageLoadTimeout' value in 'cypress.json' to wait longer.
+
+Browsers will not fire the 'load' event until all stylesheets and scripts are done downloading.
+
+When this 'load' event occurs, Cypress will continue running commands.
+    at Object.cypressErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85348:11)
+    at Object.throwErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85303:18)
+    at Object.throwErrByPath (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85335:17)
+    at timedOutWaitingForPageLoad (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:73257:17)
+    at visit.timeout.catch (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:74011:16)
+    at tryCatcher (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:118962:23)
+    at https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:114103:41
+    at tryCatcher (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:118962:23)
+    at Promise._settlePromiseFromHandler (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116898:31)
+    at Promise._settlePromise (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116955:18)
+    at Promise._settlePromise0 (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117000:10)
+    at Promise._settlePromises (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117075:18)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113687:16)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113697:10)
+    at Async.drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113571:14)
+    at <anonymous>]]></failure>
+    </testcase>
+    <testcase name="Analytics Report &quot;after each&quot; hook: onFailed for &quot;Post Login, Analytics Report, Geographic Concentrations&quot;" time="64.657" classname="&quot;after each&quot; hook: onFailed for &quot;Post Login, Analytics Report, Geographic Concentrations&quot;">
+      <failure message="Highcharts is not defined
+
+This error originated from your application code, not from Cypress.
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the &apos;uncaught:exception&apos; event.
+
+https://on.cypress.io/uncaught-exception-from-application
+
+Because this error occurred during a &apos;after each&apos; hook we are skipping all of the remaining tests." type="Uncaught ReferenceError"><![CDATA[Uncaught ReferenceError: Highcharts is not defined
+
+This error originated from your application code, not from Cypress.
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the 'uncaught:exception' event.
+
+https://on.cypress.io/uncaught-exception-from-application
+
+Because this error occurred during a 'after each' hook we are skipping all of the remaining tests.
+    at https://ares.oxanepanorama.com/custom-reports/highcharts/map.js:10:77
+    at https://ares.oxanepanorama.com/custom-reports/highcharts/map.js:11:3]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

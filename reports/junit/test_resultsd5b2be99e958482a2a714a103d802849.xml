@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="true" time="59.437" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-11-26T14:12:19" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Analytics Report" timestamp="2019-11-26T14:12:19" tests="1" failures="0" time="59.437">
+    <testcase name="Analytics Report Post Login,Loan Summary" time="59.437" classname="Post Login,Loan Summary">
+    </testcase>
+  </testsuite>
+</testsuites>

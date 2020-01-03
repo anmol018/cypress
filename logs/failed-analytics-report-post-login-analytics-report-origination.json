@@ -1,0 +1,18 @@
+{
+  "specName": "6_origination.js",
+  "title": "Post Login, Analytics Report, Origination",
+  "suiteName": "Analytics Report",
+  "testName": "Analytics Report Post Login, Analytics Report, Origination",
+  "testError": "cy.request() failed on:\n\nhttps://ares.oxanepanorama.com/api/authentication\n\nThe response we received from your web server was:\n\n  > 401: Unauthorized\n\nThis was considered a failure because the status code was not '2xx' or '3xx'.\n\nIf you do not want status codes to cause failures pass the option: 'failOnStatusCode: false'\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: POST\nURL: https://ares.oxanepanorama.com/api/authentication\nHeaders: {\n  \"Connection\": \"keep-alive\",\n  \"X-XSRF-Token\": \"13c6ca15-c18e-45c2-8389-c5a2f0e1ef9e\",\n  \"user-agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/3.4.1 Chrome/61.0.3163.100 Electron/2.0.18 Safari/537.36\",\n  \"accept\": \"*/*\",\n  \"cookie\": \"XSRF-TOKEN=13c6ca15-c18e-45c2-8389-c5a2f0e1ef9e\",\n  \"content-type\": \"application/x-www-form-urlencoded\",\n  \"accept-encoding\": \"gzip, deflate\",\n  \"content-length\": 68\n}\nBody: username=ashwani.diwakar%40oxanepartners.com&password=welcome%401234\n\n-----------------------------------------------------------\n\nThe response we got was:\n\nStatus: 401 - Unauthorized\nHeaders: {\n  \"server\": \"nginx/1.12.2\",\n  \"date\": \"Tue, 12 Nov 2019 08:25:24 GMT\",\n  \"content-type\": \"application/json;charset=UTF-8\",\n  \"transfer-encoding\": \"chunked\",\n  \"connection\": \"keep-alive\",\n  \"x-content-type-options\": \"nosniff\",\n  \"x-xss-protection\": \"1; mode=block\",\n  \"cache-control\": \"no-cache, no-store, max-age=0, must-revalidate\",\n  \"pragma\": \"no-cache\",\n  \"expires\": \"0\",\n  \"strict-transport-security\": \"max-age=31536000 ; includeSubDomains\"\n}\nBody: {\n  \"timestamp\": \"2019-11-12T08:25:24.690+0000\",\n  \"status\": 401,\n  \"error\": \"Unauthorized\",\n  \"message\": \"Unauthorized\",\n  \"path\": \"/api/authentication\"\n}\n\n\nBecause this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Analytics Report'",
+  "testCommands": [
+    "viewport 1366, 768",
+    "request ",
+    "getCookies ",
+    "assert expected **[ Array(1) ]** to have a property **length**",
+    "assert expected **[ Array(1) ]** to have a length of **1**",
+    "log 13c6ca15-c18e-45c2-8389-c5a2f0e1ef9e",
+    "request ",
+    "request "
+  ],
+  "screenshot": "post-login-analytics-report-origination-failed.png"
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="true" time="0" tests="2" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-11-27T08:53:39" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Analytics Report" timestamp="2019-11-27T08:53:39" tests="2" failures="1" time="0">
+    <testcase name="Analytics Report &quot;before each&quot; hook for &quot;Post Login,Loan Summary&quot;" time="0" classname="&quot;before each&quot; hook for &quot;Post Login,Loan Summary&quot;">
+      <failure message="cy.request() failed trying to load:
+
+https://oxane.pollencap.com/api/application-module/config
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  &gt; Error: connect ETIMEDOUT 51.140.45.227:443
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://oxane.pollencap.com/api/application-module/config
+
+-----------------------------------------------------------
+
+Common situations why this would fail:
+  - you don&apos;t have internet access
+  - you forgot to run / boot your web server
+  - your web server isn&apos;t accessible
+  - you have weird network configuration settings on your computer
+
+The stack trace for this error is:
+
+RequestError: Error: connect ETIMEDOUT 51.140.45.227:443
+    at new RequestError (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request-promise-core\lib\errors.js:14:15)
+    at Request.plumbing.callback (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request-promise-core\lib\plumbing.js:87:29)
+    at Request.RP$callback [as _callback] (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at self.callback (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request\request.js:185:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request\request.js:881:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at TLSSocket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+
+
+Because this error occurred during a &apos;before each&apos; hook we are skipping the remaining tests in the current suite: &apos;Analytics Report&apos;" type="CypressError"><![CDATA[CypressError: cy.request() failed trying to load:
+
+https://oxane.pollencap.com/api/application-module/config
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: connect ETIMEDOUT 51.140.45.227:443
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: GET
+URL: https://oxane.pollencap.com/api/application-module/config
+
+-----------------------------------------------------------
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+The stack trace for this error is:
+
+RequestError: Error: connect ETIMEDOUT 51.140.45.227:443
+    at new RequestError (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request-promise-core\lib\errors.js:14:15)
+    at Request.plumbing.callback (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request-promise-core\lib\plumbing.js:87:29)
+    at Request.RP$callback [as _callback] (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request-promise-core\lib\plumbing.js:46:31)
+    at self.callback (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request\request.js:185:22)
+    at emitOne (events.js:116:13)
+    at Request.emit (events.js:211:7)
+    at Request.onRequestError (C:\Users\anmol.sahi\AppData\Local\Cypress\Cache\3.4.1\Cypress\resources\app\packages\server\node_modules\request\request.js:881:8)
+    at emitOne (events.js:121:20)
+    at ClientRequest.emit (events.js:211:7)
+    at TLSSocket.socketErrorListener (_http_client.js:387:9)
+    at emitOne (events.js:116:13)
+    at TLSSocket.emit (events.js:211:7)
+    at emitErrorNT (internal/streams/destroy.js:64:8)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+
+
+Because this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Analytics Report'
+    at Object.cypressErr (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:85348:11)
+    at Object.throwErr (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:85303:18)
+    at Object.throwErrByPath (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:85335:17)
+    at https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:74877:23
+    at tryCatcher (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:118962:23)
+    at https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:114120:37
+    at tryCatcher (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:118962:23)
+    at Promise._settlePromiseFromHandler (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:116898:31)
+    at Promise._settlePromise (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:116955:18)
+    at Promise._settlePromise0 (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:117000:10)
+    at Promise._settlePromises (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:117075:18)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:113687:16)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:113697:10)
+    at Async.drainQueues (https://oxane.pollencap.com/__cypress/runner/cypress_runner.js:113571:14)
+    at <anonymous>]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="true" time="0" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2019-11-12T08:26:04" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="Analytics Report" timestamp="2019-11-12T08:26:04" tests="1" failures="1" time="0">
+    <testcase name="Analytics Report &quot;before each&quot; hook for &quot;Post Login, Analytics Report, Delinquency&quot;" time="0" classname="&quot;before each&quot; hook for &quot;Post Login, Analytics Report, Delinquency&quot;">
+      <failure message="cy.request() failed on:
+
+https://ares.oxanepanorama.com/api/authentication
+
+The response we received from your web server was:
+
+  &gt; 401: Unauthorized
+
+This was considered a failure because the status code was not &apos;2xx&apos; or &apos;3xx&apos;.
+
+If you do not want status codes to cause failures pass the option: &apos;failOnStatusCode: false&apos;
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://ares.oxanepanorama.com/api/authentication
+Headers: {
+  &quot;Connection&quot;: &quot;keep-alive&quot;,
+  &quot;X-XSRF-Token&quot;: &quot;7bbc2d37-a7ab-44c0-8b17-e189a8c472b9&quot;,
+  &quot;user-agent&quot;: &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/3.4.1 Chrome/61.0.3163.100 Electron/2.0.18 Safari/537.36&quot;,
+  &quot;accept&quot;: &quot;*/*&quot;,
+  &quot;cookie&quot;: &quot;XSRF-TOKEN=7bbc2d37-a7ab-44c0-8b17-e189a8c472b9&quot;,
+  &quot;content-type&quot;: &quot;application/x-www-form-urlencoded&quot;,
+  &quot;accept-encoding&quot;: &quot;gzip, deflate&quot;,
+  &quot;content-length&quot;: 68
+}
+Body: username=ashwani.diwakar%40oxanepartners.com&amp;password=welcome%401234
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 401 - Unauthorized
+Headers: {
+  &quot;server&quot;: &quot;nginx/1.12.2&quot;,
+  &quot;date&quot;: &quot;Tue, 12 Nov 2019 08:25:50 GMT&quot;,
+  &quot;content-type&quot;: &quot;application/json;charset=UTF-8&quot;,
+  &quot;transfer-encoding&quot;: &quot;chunked&quot;,
+  &quot;connection&quot;: &quot;keep-alive&quot;,
+  &quot;x-content-type-options&quot;: &quot;nosniff&quot;,
+  &quot;x-xss-protection&quot;: &quot;1; mode=block&quot;,
+  &quot;cache-control&quot;: &quot;no-cache, no-store, max-age=0, must-revalidate&quot;,
+  &quot;pragma&quot;: &quot;no-cache&quot;,
+  &quot;expires&quot;: &quot;0&quot;,
+  &quot;strict-transport-security&quot;: &quot;max-age=31536000 ; includeSubDomains&quot;
+}
+Body: {
+  &quot;timestamp&quot;: &quot;2019-11-12T08:25:50.749+0000&quot;,
+  &quot;status&quot;: 401,
+  &quot;error&quot;: &quot;Unauthorized&quot;,
+  &quot;message&quot;: &quot;Unauthorized&quot;,
+  &quot;path&quot;: &quot;/api/authentication&quot;
+}
+
+
+Because this error occurred during a &apos;before each&apos; hook we are skipping the remaining tests in the current suite: &apos;Analytics Report&apos;" type="CypressError"><![CDATA[CypressError: cy.request() failed on:
+
+https://ares.oxanepanorama.com/api/authentication
+
+The response we received from your web server was:
+
+  > 401: Unauthorized
+
+This was considered a failure because the status code was not '2xx' or '3xx'.
+
+If you do not want status codes to cause failures pass the option: 'failOnStatusCode: false'
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://ares.oxanepanorama.com/api/authentication
+Headers: {
+  "Connection": "keep-alive",
+  "X-XSRF-Token": "7bbc2d37-a7ab-44c0-8b17-e189a8c472b9",
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Cypress/3.4.1 Chrome/61.0.3163.100 Electron/2.0.18 Safari/537.36",
+  "accept": "*/*",
+  "cookie": "XSRF-TOKEN=7bbc2d37-a7ab-44c0-8b17-e189a8c472b9",
+  "content-type": "application/x-www-form-urlencoded",
+  "accept-encoding": "gzip, deflate",
+  "content-length": 68
+}
+Body: username=ashwani.diwakar%40oxanepartners.com&password=welcome%401234
+
+-----------------------------------------------------------
+
+The response we got was:
+
+Status: 401 - Unauthorized
+Headers: {
+  "server": "nginx/1.12.2",
+  "date": "Tue, 12 Nov 2019 08:25:50 GMT",
+  "content-type": "application/json;charset=UTF-8",
+  "transfer-encoding": "chunked",
+  "connection": "keep-alive",
+  "x-content-type-options": "nosniff",
+  "x-xss-protection": "1; mode=block",
+  "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+  "pragma": "no-cache",
+  "expires": "0",
+  "strict-transport-security": "max-age=31536000 ; includeSubDomains"
+}
+Body: {
+  "timestamp": "2019-11-12T08:25:50.749+0000",
+  "status": 401,
+  "error": "Unauthorized",
+  "message": "Unauthorized",
+  "path": "/api/authentication"
+}
+
+
+Because this error occurred during a 'before each' hook we are skipping the remaining tests in the current suite: 'Analytics Report'
+    at Object.cypressErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85348:11)
+    at Object.throwErr (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85303:18)
+    at Object.throwErrByPath (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:85335:17)
+    at Cypress.backend.timeout.then (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:74849:18)
+    at tryCatcher (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:118962:23)
+    at Promise._settlePromiseFromHandler (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116898:31)
+    at Promise._settlePromise (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:116955:18)
+    at Promise._settlePromise0 (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117000:10)
+    at Promise._settlePromises (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:117079:18)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueue (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113687:16)
+    at Async../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113697:10)
+    at Async.drainQueues (https://ares.oxanepanorama.com/__cypress/runner/cypress_runner.js:113571:14)
+    at <anonymous>]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
